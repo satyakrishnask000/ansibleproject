@@ -1,0 +1,13 @@
+---
+ - name: To add Multiple-users
+   hosts: lab1
+   tasks:
+    - name: Adding the Following Users
+      user: name="{{item}}" state=present
+      with_items:
+       - vara1
+       - vara22
+       - vara3
+       - vara4
+       - vara5
+...

@@ -1,0 +1,11 @@
+---
+ - name: To Write Daily Playbook to do a task
+   hosts: lab1
+   gather_facts: false
+   tasks:
+    - name: To copy the file from /tmp location
+      copy: src=/tmp/content dest=/tmp/
+
+    - name: To add a line of content into the file
+      copy: content="I'm in Hyderabad right now.My profession is Linux-Admin." dest=/tmp/content backup=yes
+... 

@@ -1,0 +1,6 @@
+#!/bin/bash
+---
+ - name: This is My First PlayBook...!!
+   hosts: lab1
+   gather_facts: false
+...

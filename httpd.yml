@@ -1,0 +1,14 @@
+---
+ - name: Install
+   hosts: lab1
+   tasks:
+    - name: Install httpd
+      yum: name=httpd state=present
+      notify: Httpd service start & restart
+
+    - name: Editing the file
+      copy: src=index.html dest=/var/www/html/
+   handlers:
+    - name: Httpd service start & restart
+      service: name=httpd state=restarted enabled=yes
+...

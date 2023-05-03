@@ -1,0 +1,7 @@
+---
+ - name: Removing the httpd pkg
+   hosts: lab1
+   tasks:
+    - name: Uninstalling httpd
+      yum: name=httpd state=absent 
+...

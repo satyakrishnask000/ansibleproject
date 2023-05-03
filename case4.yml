@@ -1,0 +1,8 @@
+---
+ - name: To display the usage of debug modules
+   hosts: lab1
+   tasks:
+    - name: Printing
+      debug:
+       msg: The hostname of Server is {{ansible_hostname}}
+...

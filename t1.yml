@@ -1,0 +1,9 @@
+---
+ - name: testing
+   hosts: lab1
+   tasks:
+    - name: Check
+      command: service httpd status
+      register: state
+    - debug: var=state.stdout_lines
+...

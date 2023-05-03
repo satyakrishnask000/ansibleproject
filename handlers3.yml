@@ -1,0 +1,14 @@
+---
+ - name: Today handlers class
+   hosts: lab1
+   tasks: 
+    - name: Copy file from Ansible server
+      copy: src=/etc/ssh/sshd_config dest=/etc/ssh/
+      notify: Restart the sshd service
+
+   handlers:
+
+    - name: SSHD SERVICE
+      service: name=sshd state=restarted 
+      listen: Restart the sshd service  
+...

@@ -1,0 +1,8 @@
+#!/usr/bin/ansible
+---
+ - name: This is for Yum modules
+   hosts: lab1
+   tasks:
+    - name: Yum Module for updates and install
+      yum: name=httpd state=present
+...

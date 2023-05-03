@@ -1,0 +1,12 @@
+---
+ - name: This is for When condition class
+   hosts: lab1
+   tasks:
+    - name: Editing the file
+      copy: src=/etc/ssh/sshd_config dest=/etc/ssh/
+      register: ssh
+
+    - name: Restarting sshd
+      service: name=sshd state=restarted
+      when: ssh.changed
+...

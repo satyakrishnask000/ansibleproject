@@ -1,0 +1,7 @@
+---
+ - name: The Usage of the Debug Module, Case5
+   hosts: lab1
+   tasks:
+    - name: Debug Printing
+      debug:
+        var: inventory_hostname

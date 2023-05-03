@@ -1,0 +1,9 @@
+---
+ - name: Checking the kernel version with standard output
+   hosts: lab1
+   tasks:
+    - name: Show the standard output for kernel version
+      command: uname -a
+      register: ker
+    - debug: var=ker.stdout 
+...

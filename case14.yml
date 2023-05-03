@@ -1,0 +1,24 @@
+---
+ - name: Debug with Register_Multiple terms
+   hosts: lab1
+   tasks:
+    - name: server kernel
+      command: uname -a
+      register: ker
+    - debug: var=ker.stdout
+ 
+    - name: server date
+      command: date
+      register: date
+    - debug: var=date.stdout
+
+    - name: server uptime
+      command: uptime
+      register: up
+    - debug: var=up.stdout
+
+    - name: server hostname
+      command: hostname
+      register: host
+    - debug: var=host.stdout
+...

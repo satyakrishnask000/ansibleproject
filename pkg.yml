@@ -1,0 +1,25 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: To Install Packages in Ansible clients through yum module
+   hosts: lab1
+   tasks: 
+    - name: Installing httpd pkg
+      yum: name=httpd state=present
+      tags: web
+
+    - name: Installing vsftpd pkg
+      yum: name=vsftpd state=present
+      tags: vsf
+
+    - name: Installing ftp pkg
+      yum: name=ftp state=present
+      tags: ftp
+ 
+    - name: Installing samba pkg
+      yum: name=samba state=present
+      tags: smb
+
+    - name: Installing nc pkg
+      yum: name=nc state=present
+      tags: ncat
+...    

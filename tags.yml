@@ -1,0 +1,23 @@
+---
+ - name: To test Tags
+   hosts: lab1
+   tasks: 
+    - name: Install
+      yum: name=httpd state=present
+      tags: web
+
+    - name: Service starting
+      service: name=httpd state=started
+      tags: service
+
+    - name: copying the file
+      copy: src=index.html dest=/var/www/html/
+      tags: copy
+
+    - name: Check
+      command: service httpd status
+      register: status
+
+    - debug: var=status.stdout_lines
+      tags: show
+...

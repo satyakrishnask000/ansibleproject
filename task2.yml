@@ -1,0 +1,8 @@
+#!/bin/bash
+---
+ - name: This is My 2nd PlayBook For Copy Module.....!!!!....!!
+   hosts: lab1
+   tasks:
+      - name: Copying OS Files from ONE to ONE
+        copy: src=/etc/group dest=/tmp/group06
+...

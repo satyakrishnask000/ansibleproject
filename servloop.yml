@@ -1,0 +1,12 @@
+---
+ - name: To start Services at a time
+   hosts: lab1
+   tasks: 
+    - name: Start the following
+      service: name="{{item}}" state=restarted
+      loop:
+       - httpd
+       - vsftpd
+       - ntpd
+       - smb
+...

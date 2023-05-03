@@ -1,0 +1,14 @@
+---
+ - name: To Practice the Playbook regularly
+   hosts: vara-sys-50
+   tasks:
+    - name: To Install the httpd Package
+      yum: name=httpd state=present 
+
+    - name: To Start the httpd Service
+      service: name=httpd state=started enabled=yes
+
+    - name: To Create&Write the content in the Index.html file
+      file: dest=/var/www/html/index.html state=touch owner=root group=root
+    - copy: dest=/var/www/html/index.html content='varains.com'
+...

@@ -1,0 +1,10 @@
+---
+ - name: To copy Files within the Ansible-Master system
+   hosts: localhost
+   tasks:
+    - name: Copying the Fstab file to tmp
+      copy: src=/etc/fstab dest=/tmp/fstab13022023 remote_src=yes
+    
+    - name: Copying the file from /var
+      copy: src=/var/www/html/index.html dest=/opt/index.html_1302 remote_src=yes
+...

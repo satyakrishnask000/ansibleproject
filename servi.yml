@@ -1,0 +1,45 @@
+#!/usr/bin/ansible-playbook
+---
+ - name: To Start Service in client Machines
+   hosts: lab1
+   tasks:
+    - name: To start sshd service
+      service: name=sshd state=started enabled=yes
+      tags: ssh
+
+    - name: To start httpd service
+      service: name=httpd state=started enabled=yes
+      tags: web
+
+    - name: To start vsftpd service
+      service: name=vsftpd state=started enabled=yes
+      tags: vsf
+
+    - name: To start samba service
+      service: name=smb state=started enabled=yes
+      tags: smb
+  
+    - name: To start nfs service
+      service: name=nfs state=started enabled=yes
+      tags: nfs
+
+    - name: To start autofs service
+      service: name=autofs state=started enabled=yes
+      tags: autofs
+
+    - name: To start ntpd service
+      service: name=ntpd state=started enabled=yes
+      tags: ntpd
+
+    - name: To start rsys service
+      service: name=rsyslog state=started enabled=yes
+      tags: rsys
+
+    - name: To start dnsmasq service
+      service: name=dnsmasq state=started enabled=yes
+      tags: ntpdate
+
+    - name: To stop ip6tables service
+      service: name=ip6tables state=stopped enabled=yes
+      tags: ip6
+...

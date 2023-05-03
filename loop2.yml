@@ -1,0 +1,13 @@
+---
+ - name: To Create Multiple Directories
+   hosts: lab1
+   tasks:
+    - name: Creating the Dir's
+      file: dest=/tmp/"{{item}}" state=directory
+      with_items:
+         - dir1
+         - Task1
+         - Ieasy
+         - Future
+         - msndr
+...

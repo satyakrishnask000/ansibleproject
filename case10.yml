@@ -1,0 +1,14 @@
+---
+ - name: File-level variables & showing variables
+   hosts: lab1
+   vars:
+       os: "Linux"
+       cloud: "AWS"
+       tools: "Devops"
+   tasks:
+    - name: Show the below Content
+      debug:
+        msg:
+           - "We will provide training on {{os}}"
+           - "and lab experience in {{cloud}}"
+           - "Basic Knowledge on {{tools}}"

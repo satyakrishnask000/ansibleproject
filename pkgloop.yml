@@ -1,0 +1,14 @@
+---
+ - name: To Install Multiple-Packages at a time
+   hosts: lab1
+   tasks:
+    - name: Install the Following Packages
+      yum: name="{{item}}" state=latest
+      with_items:
+       - httpd
+       - vsftpd
+       - ftp
+       - samba
+       - telnet
+       - ntp
+...

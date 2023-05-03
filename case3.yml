@@ -1,0 +1,10 @@
+---
+ - name: Show me the below Content as example for case-3
+   hosts: lab1
+   tasks:
+    - name: To display Debug-Module for Multiple-Lines as Messages
+      debug:
+        msg:
+            - welcome to Varains Team of BAT-22A
+            - Welcome to SatyaKrishna Tenant
+            - Welcome Satya, Come in

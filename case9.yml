@@ -1,0 +1,12 @@
+---
+ - name: Showing Variables
+   hosts: lab1
+   vars:
+        os: "Linux"
+        cloud: "AWS"
+        tools: "Devops"
+   tasks:
+    - name: Debug Messages from file-level Variables
+      debug:
+       msg: "I Love {{tools}}"
+...

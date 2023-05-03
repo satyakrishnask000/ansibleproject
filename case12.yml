@@ -1,0 +1,11 @@
+---
+ - name: Check the Kernel version
+   hosts: lab1
+   tasks:
+    - name: Kernel version of the server(with register)
+      command: uname -a
+      register: kernel
+
+    - name: Show the register data
+      debug: var=kernel
+...

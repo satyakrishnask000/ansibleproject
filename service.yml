@@ -1,0 +1,7 @@
+---
+ - name: This is for Service modules
+   hosts: lab1
+   tasks:
+    - name: Regarding the service states
+      service: name=httpd state=started enabled=yes
+...

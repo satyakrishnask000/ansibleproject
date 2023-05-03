@@ -1,0 +1,11 @@
+---
+ - name: Usage of Debug Module & Facts display
+   hosts: lab1
+   tasks:
+    - name: Display all Facts Varibles as below
+      debug:
+        msg:
+           - My Hostname is:{{ansible_hostname}}
+           - My IP-Address is:{{ansible_facts['fqdn']}}
+           - Ip V4 is:{{ansible_default_ipv4.address}}
+...

@@ -1,0 +1,10 @@
+---
+ - name: This is for handlers Task
+   hosts: lab1
+   tasks: 
+    - name: copy the sshd_config file
+      copy: src=/etc/ssh/sshd_config dest=/etc/ssh/
+
+    - name: Restarting sshd service
+      service: name=sshd state=restarted
+...

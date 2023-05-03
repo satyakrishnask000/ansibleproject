@@ -1,0 +1,7 @@
+---
+ - name: To Power off all
+   hosts: lab1
+   tasks:
+    - name: Shutting-down all
+      command: init 0
+...

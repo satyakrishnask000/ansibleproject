@@ -1,0 +1,13 @@
+---
+ - name: To Create Multiple files at a time
+   hosts: lab1
+   tasks:
+    - name: Create the following files
+      file: dest=/tmp/"{{item}}" state=touch
+      with_items:
+         - file7
+         - text7
+         - F77
+         - passwdf7
+         - extensionfile7
+...

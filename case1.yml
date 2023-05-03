@@ -1,0 +1,7 @@
+---
+ - name: To Check the Debug Module PlayBook
+   hosts: lab1
+   tasks:
+#    - debug: msg="Welcome to Varains & Nareshins along with Me"
+    - name: To Display the content as mentioned in the Debug Module
+      debug: msg="Welcome to Varains & Narains of Kondapur in Hydearabad"

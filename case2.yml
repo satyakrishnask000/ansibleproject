@@ -1,0 +1,7 @@
+---
+ - name: To Display the below case2 content
+   hosts: lab1
+   tasks:
+    - name: Dipay the Message on the screen
+      debug:
+            msg: Welcome to Country of the world INDIA
