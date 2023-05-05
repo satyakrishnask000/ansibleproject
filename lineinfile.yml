@@ -2,16 +2,6 @@
  - name: This is for Playbook Line in file
    hosts: lab1
    tasks: 
-
-
-
-
-
-
-
-
-
-
      - name: create a new file
        file: dest=/var/www/html/index.html state=touch 
      - name: This for appending File Httpd
